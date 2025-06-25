@@ -1,6 +1,7 @@
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
+import { useFocusEffect } from '@react-navigation/native'
 import { useVideoPlayer, VideoView } from 'expo-video'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import '../global.css'
 
@@ -21,6 +22,16 @@ export default function Index() {
     return () => player.removeListener?.('playToEnd', onEnded)
   }, [player])
 
+  useFocusEffect(
+    useCallback(() => {
+      if (status === 'playing') {
+        player.play?.()
+      }
+      return () => {
+        player.pause?.()
+      }
+    }, [player, status])
+  )
   let iconType: 'motion-play-outline' | 'motion-pause-outline' | 'replay' =
     'motion-pause-outline'
   if (status === 'paused') iconType = 'motion-play-outline'
@@ -30,7 +41,7 @@ export default function Index() {
     <MaterialCommunityIcons
       name={iconType}
       size={64}
-      color='#FF8C00'
+      color='#f97316'
     />
   )
 
@@ -52,7 +63,7 @@ export default function Index() {
     <View className='flex-1 items-center justify-center bg-gray-900'>
       <VideoView
         style={{
-          height: '50%',
+          height: '40%',
           aspectRatio: 16 / 9,
           borderRadius: 16
         }}
