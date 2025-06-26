@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/icons/op-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.pambe.onepieceapp"
     },
     "web": {
       "bundler": "metro",
@@ -44,6 +45,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a96011d0-192e-4fd0-9dd1-3c89a67b4f56"
+      }
     }
   }
 }
