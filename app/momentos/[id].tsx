@@ -11,7 +11,7 @@ export default function Momento() {
   if (!momento) {
     return (
       <View className='flex-1 items-center justify-center'>
-        <Text className='text-white text-2xl'>Momento no encontrado</Text>
+        <Text className='text-2xl text-white'>Momento no encontrado</Text>
       </View>
     )
   }
@@ -44,8 +44,8 @@ export default function Momento() {
           nativeControls
         />
       </View>
-      <View className='px-4 mt-4 gap-2'>
-        <Text className='text-3xl text-neutral-100 font-bold'>
+      <View className='mt-4 gap-2 px-4'>
+        <Text className='text-3xl font-bold text-neutral-100'>
           Descripción y contexto
         </Text>
         <Text className='text-xl text-neutral-200'>{momento.description}</Text>

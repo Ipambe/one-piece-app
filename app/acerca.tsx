@@ -4,20 +4,20 @@ const uri =
   'https://static.wikia.nocookie.net/onepiece/images/8/8d/One_Piece.png/revision/latest?cb=20131217174846&path-prefix=es'
 export default function Acerca() {
   return (
-    <ScrollView className='flex-1 mb-4'>
+    <ScrollView className='mb-4 flex-1'>
       <Image
         source={{ uri }}
-        className='w-full aspect-video'
+        className='aspect-video w-full'
       />
       <View className='p-4'>
         <View>
-          <Text className='text-xl text-neutral-200 mb-2'>
+          <Text className='mb-2 text-xl text-neutral-200'>
             <Text className='font-bold'>Obra:</Text> One Piece
           </Text>
-          <Text className='text-xl text-neutral-200 mb-2'>
+          <Text className='mb-2 text-xl text-neutral-200'>
             <Text className='font-bold'>Creador:</Text> Eiichirō Oda
           </Text>
-          <Text className='text-xl text-neutral-200 mb-2'>
+          <Text className='mb-2 text-xl text-neutral-200'>
             <Text className='font-bold'>Sagas y arcos argumentales:</Text> 11
             Sagas y 33 Arcos Argumentales
           </Text>

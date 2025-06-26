@@ -17,10 +17,10 @@ export default function Personaje() {
   const { name, quote, uri, description, age, height, role, bounty, color } =
     personaje
   return (
-    <ScrollView className='flex-1 mb-4'>
+    <ScrollView className='mb-4 flex-1'>
       <View className='mt-10 items-center gap-2'>
         <View
-          className='border-2 p-2 rounded-full'
+          className='rounded-full border-2 p-2'
           style={{ borderColor: color, width: 250, height: 250 }}
         >
           <Image
@@ -35,23 +35,23 @@ export default function Personaje() {
             }}
           />
         </View>
-        <Text className='text-4xl text-white font-bold text-center'>
+        <Text className='text-center text-4xl font-bold text-white'>
           {name}
         </Text>
         <Text
-          className='text-lg italic text-center'
+          className='text-center text-lg italic'
           style={{ color }}
         >
           "{quote}"
         </Text>
       </View>
-      <View className='p-4 mt-8 mx-2 rounded-2xl gap-4'>
-        <Text className='text-white text-3xl font-bold'>Descripción</Text>
-        <Text className='text-neutral-200 text-xl'>{description}</Text>
+      <View className='mx-2 mt-8 gap-4 rounded-2xl p-4'>
+        <Text className='text-3xl font-bold text-white'>Descripción</Text>
+        <Text className='text-xl text-neutral-200'>{description}</Text>
       </View>
-      <View className='p-4 mt-8 mx-2 rounded-2xl gap-4'>
-        <Text className='text-white text-3xl font-bold'>Atributos</Text>
-        <View className='py-4 mt-4 border-t-2 border-t-neutral-500 flex-row justify-between'>
+      <View className='mx-2 mt-8 gap-4 rounded-2xl p-4'>
+        <Text className='text-3xl font-bold text-white'>Atributos</Text>
+        <View className='mt-4 flex-row justify-between border-t-2 border-t-neutral-500 py-4'>
           <View className='flex-1 gap-2'>
             <Text className='text-3xl text-white'>Edad</Text>
             <Text
@@ -71,7 +71,7 @@ export default function Personaje() {
             </Text>
           </View>
         </View>
-        <View className='py-4 mt-4 border-t-2 border-t-neutral-500 flex-row justify-between'>
+        <View className='mt-4 flex-row justify-between border-t-2 border-t-neutral-500 py-4'>
           <View className='flex-1 gap-2'>
             <Text className='text-3xl text-white'>Recompensa</Text>
             <Text

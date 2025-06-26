@@ -14,12 +14,12 @@ export default function Momentos() {
             params: { id: momento.id }
           }}
         >
-          <TouchableOpacity className='w-full bg-neutral-800 rounded-2xl px-4 py-6 flex-row items-center gap-4 border border-orange-400'>
+          <TouchableOpacity className='w-full flex-row items-center gap-4 rounded-2xl border border-orange-400 bg-neutral-800 px-4 py-6'>
             <View className='flex-1'>
               <Text className='text-2xl font-bold text-white'>
                 {momento.title}
               </Text>
-              <Text className='text-neutral-300 mt-1'>Ver más</Text>
+              <Text className='mt-1 text-neutral-300'>Ver más</Text>
             </View>
           </TouchableOpacity>
         </Link>

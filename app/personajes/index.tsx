@@ -16,10 +16,10 @@ export default function Personajes() {
         >
           <TouchableOpacity
             style={{ borderColor: personaje.color }}
-            className='w-full rounded-2xl px-4 py-6 flex-row items-center gap-4 border'
+            className='w-full flex-row items-center gap-4 rounded-2xl border px-4 py-6'
           >
             <Text
-              className='text-3xl font-medium text-center'
+              className='text-center text-3xl font-medium'
               style={{ color: personaje.color }}
             >
               {personaje.name}

@@ -5,7 +5,8 @@ import { useCallback, useEffect, useState } from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import '../global.css'
 
-const videoId = 'https://res.cloudinary.com/dnmnyien6/video/upload/v1750909770/intro_plujvf.mp4'
+const videoId =
+  'https://res.cloudinary.com/dnmnyien6/video/upload/v1750909770/intro_plujvf.mp4'
 
 export default function Index() {
   const [status, setStatus] = useState<'playing' | 'paused' | 'ended'>(
@@ -74,9 +75,9 @@ export default function Index() {
         allowsVideoFrameAnalysis={false}
         nativeControls={false}
       />
-      <View className='flex-row items-center justify-center mt-4'>
+      <View className='mt-4 flex-row items-center justify-center'>
         <TouchableOpacity
-          className='p-4 rounded-lg'
+          className='rounded-lg p-4'
           onPress={handleButtonPress}
         >
           {icon}
