@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import '../global.css'
 
-const videoId = require('../assets/videos/intro.mp4')
+const videoId = 'https://res.cloudinary.com/dnmnyien6/video/upload/v1750909770/intro_plujvf.mp4'
 
 export default function Index() {
   const [status, setStatus] = useState<'playing' | 'paused' | 'ended'>(
