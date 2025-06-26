@@ -32,6 +32,7 @@ export default function Index() {
       }
     }, [player, status])
   )
+
   let iconType: 'motion-play-outline' | 'motion-pause-outline' | 'replay' =
     'motion-pause-outline'
   if (status === 'paused') iconType = 'motion-play-outline'
@@ -60,7 +61,7 @@ export default function Index() {
   }
 
   return (
-    <View className='flex-1 items-center justify-center bg-gray-900'>
+    <View className='flex-1 items-center justify-center'>
       <VideoView
         style={{
           height: '40%',
