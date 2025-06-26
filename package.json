@@ -8,7 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "format": "prettier --write \"**/*.tsx\""
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -46,9 +47,20 @@
     "@types/react": "~19.0.10",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
+    "prettier": "^3.6.1",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.8.3"
+  },
+  "prettier": {
+    "jsxSingleQuote": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "semi": false,
+    "singleAttributePerLine": true,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   },
   "private": true
 }
