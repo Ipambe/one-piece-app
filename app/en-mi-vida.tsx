@@ -8,7 +8,7 @@ const uri =
 
 export default function EnMiVida() {
   const player = useVideoPlayer(uri, (player) => {
-    // player.play()
+    player.play()
   })
 
   useFocusEffect(
