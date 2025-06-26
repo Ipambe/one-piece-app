@@ -10,7 +10,7 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         // initialRouteName='index'
-        initialRouteName='contratame'
+        initialRouteName='en-mi-vida'
         backBehavior='history'
         screenOptions={{
           drawerType: 'front',

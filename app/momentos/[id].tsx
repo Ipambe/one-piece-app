@@ -15,9 +15,11 @@ export default function Momento() {
       </View>
     )
   }
+
   const player = useVideoPlayer(momento.uri, (player) => {
     player.play()
   })
+
   useFocusEffect(
     useCallback(() => {
       player.play?.()
