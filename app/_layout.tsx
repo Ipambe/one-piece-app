@@ -10,7 +10,7 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         // initialRouteName='index'
-        initialRouteName='personajes/index'
+        initialRouteName='momentos/index'
         backBehavior='history'
         screenOptions={{
           drawerType: 'front',
@@ -93,7 +93,30 @@ export default function Layout() {
         />
         <Drawer.Screen
           name='momentos/[id]'
-          options={{ drawerItemStyle: { display: 'none' } }}
+          options={({ route }: { route: { params?: { id?: string } } }) => {
+            const id = route?.params?.id
+            const { MOMENTOS } = require('@/constants/momentos')
+            const momento = MOMENTOS.find((m: any) => m.id === id)
+            return {
+              drawerItemStyle: { display: 'none' },
+              title: momento ? momento.title : 'Momento',
+              headerLeft: () => {
+                return (
+                  <TouchableOpacity
+                    className='p-2 pl-1 mr-1'
+                    style={{ marginLeft: 10 }}
+                    onPress={() => router.back()}
+                  >
+                    <Ionicons
+                      name='arrow-back'
+                      size={24}
+                      color='#fff'
+                    />
+                  </TouchableOpacity>
+                )
+              }
+            }
+          }}
         />
         <Drawer.Screen
           name='acerca'
