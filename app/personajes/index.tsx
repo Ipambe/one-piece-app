@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, View } from 'react-native'
 
 export default function Personajes() {
   return (
-    <View className='flex-1 justify-center items-center gap-8'>
+    <View className='flex-1 items-center gap-8 px-4 pt-8'>
       {PERSONAJES.map((personaje) => (
         <Link
           key={personaje.slug}
@@ -16,7 +16,7 @@ export default function Personajes() {
         >
           <TouchableOpacity
             style={{ borderColor: personaje.color }}
-            className='py-6 border w-3/4 rounded-2xl text-2xl font-bold text-center'
+            className='w-full rounded-2xl px-4 py-6 flex-row items-center gap-4 border'
           >
             <Text
               className='text-3xl font-medium text-center'
