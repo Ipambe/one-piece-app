@@ -10,11 +10,10 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         // initialRouteName='index'
-        initialRouteName='momentos/index'
+        initialRouteName='acerca'
         backBehavior='history'
         screenOptions={{
           drawerType: 'front',
-
           drawerStyle: {
             backgroundColor: '#333',
             borderRightWidth: 1,
