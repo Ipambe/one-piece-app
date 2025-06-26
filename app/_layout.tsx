@@ -10,7 +10,7 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         // initialRouteName='index'
-        initialRouteName='acerca'
+        initialRouteName='contratame'
         backBehavior='history'
         screenOptions={{
           drawerType: 'front',
@@ -39,13 +39,13 @@ export default function Layout() {
           }
         }}
         drawerContent={(props) => (
-          <View className='flex-1 mt-safe'>
-            <View className='p-6 border-b border-b-neutral-500'>
+          <View className='mt-safe flex-1'>
+            <View className='border-b border-b-neutral-500 p-6'>
               <Text className='text-2xl font-bold text-orange-500'>
                 One Piece App
               </Text>
             </View>
-            <View className='px-2 mt-10 flex-1'>
+            <View className='mt-10 flex-1 px-2'>
               <DrawerItemList {...props} />
             </View>
           </View>
@@ -71,7 +71,7 @@ export default function Layout() {
               headerLeft: () => {
                 return (
                   <TouchableOpacity
-                    className='p-2 pl-1 mr-1'
+                    className='mr-1 p-2 pl-1'
                     style={{ marginLeft: 10 }}
                     onPress={() => router.back()}
                   >
@@ -102,7 +102,7 @@ export default function Layout() {
               headerLeft: () => {
                 return (
                   <TouchableOpacity
-                    className='p-2 pl-1 mr-1'
+                    className='mr-1 p-2 pl-1'
                     style={{ marginLeft: 10 }}
                     onPress={() => router.back()}
                   >
